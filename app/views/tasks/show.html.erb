@@ -1,0 +1,11 @@
+<h2><%= @task.name %></h2>
+
+<div>
+  <p>  Task done : <%= @task.status %></p>
+  <p>  Task date : <%= @task.date %></p>
+
+  <p><%= link_to 'EDIT', edit_task_path %> | <%= link_to "Delete", task_path(@task),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></p>
+  <p><%= link_to 'My all tasks', tasks_path %></p>
+</div>
